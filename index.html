@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Random Fifa Card Generator</title>
+</head>
+<body>
+    <div id="app">
+        <img :class="gender" v-bind:src="picture" :alt="`${firstName} ${lastName}`">
+        <h2> {{ lastName }} </h2>
+        <h1> {{ totalRating }}</h1>
+        <h3>{{ position }}</h3>
+        <h4>{{ club }} / {{ country }}</h4>
+        <h3 style="font-weight: bold;">PAC: {{ pace }} / DRI: {{ dribbling }}</h3>
+        <h3 style="font-weight: bold;">SHO: {{ shooting }} / DEF: {{ defending }}</h3>
+        <h3 style="font-weight: bold;">PAS: {{ passing }} / DRI: {{ physical }}</h3>
+        <button v-on:click="getUser()" :class="gender"> Get Random Football Player </button>
+    </div>
+    
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="app.js"></script>
+</body>
+</html>
